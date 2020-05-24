@@ -2,9 +2,22 @@ class VCOM
 {
 	tag = "VCM";
 	
+	// Initialization functions. These should only run once on startup.
+	class Init
+	{
+		class VcomInit
+		{
+			file = "btc\framework\extScripts\Vcom\VcomInit.sqf";
+		};
+		class VcomInitClient
+		{
+			file = "btc\framework\extScripts\Vcom\VcomInitClient.sqf";
+		};
+	};
+
 	class FSM
 	{
-		file = "Vcom\FSMS";
+		file = "btc\framework\extScripts\Vcom\FSMS";
 		
 		// group spawn VCM_fnc_SQUADBEH
 		class SQUADBEH 
@@ -28,7 +41,7 @@ class VCOM
 	
 	class Functions 
 	{
-		file = "Vcom\Functions\VCM_Functions";
+		file = "btc\framework\extScripts\Vcom\Functions\VCM_Functions";
 		
 		// [unitToRearm, rearmLocation] spawn VCM_fnc_ActRearm
 		class ActRearm {};
@@ -161,9 +174,6 @@ class VCOM
 
 		//[_pos,_dist,_params] call VCM_fnc_isFlatEmpty;
 		class isFlatEmpty {};	
-
-		//[] call VCM_fnc_CBASettings;
-		class CBASettings {};
 		
 		//[] call VCM_fnc_SniperList
 		class SniperList {};

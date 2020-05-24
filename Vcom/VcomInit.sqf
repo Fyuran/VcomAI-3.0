@@ -15,13 +15,13 @@ if (isServer) then
 		}
 		else
 		{
-			[] call compile preprocessFileLineNumbers "Vcom\Functions\VCOMAI_DefaultSettings.sqf";
+			[] call compile preprocessFileLineNumbers "btc\framework\extScripts\Vcom\Functions\VCOMAI_DefaultSettings.sqf";
 			[Vcm_Settings] remoteExec ["VCM_PublicScript",0,false];
 		};
 	}
 	else
 	{
-			[] call compile preprocessFileLineNumbers "Vcom\Functions\VCOMAI_DefaultSettings.sqf";
+			[] call compile preprocessFileLineNumbers "btc\framework\extScripts\Vcom\Functions\VCOMAI_DefaultSettings.sqf";
 			[Vcm_Settings] remoteExec ["VCM_PublicScript",0,false];
 	};
 }
@@ -54,16 +54,6 @@ VCOM_MINEARRAY = [];
 
 [] spawn
 {
-	sleep 2;
-	if (hasInterface) then
-	{
-		//Event handlers for players	
-		player addEventHandler ["Fired",{_this call VCM_fnc_HearingAids;}];
-		player spawn VCM_fnc_IRCHECK;
-		player addEventHandler ["Respawn",{_this spawn VCM_fnc_IRCHECK;}];
-		if (Vcm_PlayerAISkills) then {[] spawn VCM_fnc_PLAYERSQUAD;};
-	};
-	
 	[] spawn VCM_fnc_AIDRIVEBEHAVIOR;
 	
 	while {true} do 
