@@ -298,7 +298,7 @@
     "SLIDER", // setting type
     "AI Aiming Accuracy (West)", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     "VCOM SKILL SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0,1,0.25,2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0,1,0.25,3], // data for this setting: [min, max, default, number of shown trailing decimals]
     true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
@@ -311,7 +311,7 @@
     "SLIDER", // setting type
     "AI Aiming Accuracy (East)", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     "VCOM SKILL SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0,1,0.25,2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0,1,0.25,3], // data for this setting: [min, max, default, number of shown trailing decimals]
     true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
@@ -324,7 +324,7 @@
     "SLIDER", // setting type
     "AI Aiming Accuracy (Ind)", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     "VCOM SKILL SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0,1,0.25,2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0,1,0.25,3], // data for this setting: [min, max, default, number of shown trailing decimals]
     true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
@@ -338,7 +338,7 @@
     "SLIDER", // setting type
     "AI Aiming Shake (West)", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     "VCOM SKILL SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0,1,0.15,2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0,1,0.15,3], // data for this setting: [min, max, default, number of shown trailing decimals]
     true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
@@ -351,7 +351,7 @@
     "SLIDER", // setting type
     "AI Aiming Shake (East)", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     "VCOM SKILL SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0,1,0.15,2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0,1,0.15,3], // data for this setting: [min, max, default, number of shown trailing decimals]
     true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
@@ -364,7 +364,7 @@
     "SLIDER", // setting type
     "AI Aiming Shake (Ind)", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     "VCOM SKILL SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0,1,0.15,2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0,1,0.15,3], // data for this setting: [min, max, default, number of shown trailing decimals]
     true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
@@ -378,7 +378,7 @@
     "SLIDER", // setting type
     "AI Aiming Speed (West)", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     "VCOM SKILL SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0,1,0.35,2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0,1,0.35,3], // data for this setting: [min, max, default, number of shown trailing decimals]
     true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
@@ -391,7 +391,7 @@
     "SLIDER", // setting type
     "AI Aiming Speed (East)", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     "VCOM SKILL SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0,1,0.35,2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0,1,0.35,3], // data for this setting: [min, max, default, number of shown trailing decimals]
     true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
@@ -404,7 +404,7 @@
     "SLIDER", // setting type
     "AI Aiming Speed (Ind)", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     "VCOM SKILL SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0,1,0.35,2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0,1,0.35,3], // data for this setting: [min, max, default, number of shown trailing decimals]
     true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];

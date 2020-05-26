@@ -29,7 +29,7 @@ Vcm_Settings =
 	//VCM_SIDEENABLED = [west,east,resistance]; //Sides that will activate Vcom AI
 	//VCM_RAGDOLL = true; //Should AI ragdoll when hit
 	//VCM_RAGDOLLCHC = 50; //CHANCE AI RAGDOLL	
-	//VCM_FullSpeed = true; //Enforce full speedmode during combat (Does not reset after combat end)
+	VCM_FullSpeed = true; //Enforce full speedmode during combat (Does not reset after combat end)
 	//VCM_HEARINGDISTANCE = 1200; //Distance AI hear unsuppressed gunshots.
 	//VCM_WARNDIST = 1000; //How far AI can request help from other groups.
 	//VCM_WARNDELAY = 30; //How long the AI have to survive before they can call in for support. This activates once the AI enter combat.
@@ -41,11 +41,11 @@ Vcm_Settings =
 	//VCM_FRMCHANGE = true; //AI GROUPS WILL CHANGE FORMATIONS TO THEIR BEST GUESS.
 	//VCM_SKILLCHANGE = true; //AI Groups will have their skills changed by Vcom.
 	VCM_USECBASETTINGS = true;//If CBA is enabled on the host, use the CBA default settings. If false, use the filepatching settings instead.
-	VCM_CARGOCHNG = true; //If true, Vcom will handle disembarking/re-embarking orders instead of vanilla. This is with the intention to prevent the endless embark/disembark loops AI are given.	
-	VCM_TURRETUNLOAD = true;//If true, AI will automatically disembark turret positions in vehicles, if the vehicle is badly damaged. This is to prevent AI leaving a tank, when the tracks are damaged.	
+	VCM_CARGOCHNG = false; //If true, Vcom will handle disembarking/re-embarking orders instead of vanilla. This is with the intention to prevent the endless embark/disembark loops AI are given.	
+	VCM_TURRETUNLOAD = false;//If true, AI will automatically disembark turret positions in vehicles, if the vehicle is badly damaged. This is to prevent AI leaving a tank, when the tracks are damaged.	
 	VCM_DISEMBARKRANGE = 200; //How far AI will disembark from their enemies. If the vehicle is damaged, they will disembark.
-	VCM_AISNIPERS = true; //Special sniper AI
-	VCM_AISUPPRESS = true; //AI will attack from further away with primary weapons to suppress enemies
+	VCM_AISNIPERS = false; //Special sniper AI
+	VCM_AISUPPRESS = false; //AI will attack from further away with primary weapons to suppress enemies
 	//Vcm_DrivingActivated = false; //AI will use experimental driving improvements.
 	Vcm_PlayerAISkills = false; //AI in a group, that a players leads, can have their skills changed separately.
 		
@@ -145,3 +145,5 @@ Vcm_Settings =
 	diag_log "VCOM: Loaded Default Settings";
 
 };
+
+publicVariable "Vcm_Settings";

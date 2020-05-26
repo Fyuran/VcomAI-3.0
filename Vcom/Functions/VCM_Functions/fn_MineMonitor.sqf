@@ -21,7 +21,7 @@ private _RemoveLst = [];
 		private _Side = _x select 1;
 		private _EL = [];
 		private _TargetSide = "";
-		private _Nearbylist = _Mine nearEntities [["Man","LandVehicle"], 2.5];
+		private _Nearbylist = _Mine nearEntities [["CAManBase","LandVehicle"], 2.5];
 
 		if (count _Nearbylist > 0) then
 		{

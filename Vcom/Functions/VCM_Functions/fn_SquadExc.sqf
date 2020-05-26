@@ -15,3 +15,4 @@
 
 _this spawn VCM_fnc_SQUADBEH;
 VcmAI_ActiveList pushback _this;
+_this call VCM_AIDIFSET;

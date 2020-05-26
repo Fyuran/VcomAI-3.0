@@ -4,26 +4,9 @@ VCM_ServerAsk = compileFinal "(_this select 1) publicVariableClient (_this selec
 
 if (isServer) then
 {
-	if (isFilePatchingEnabled) then
-	{
-		private _Filecheck = loadFile "\userconfig\VCOM_AI\AISettingsV3.hpp";
-
-		if !(_FileCheck isEqualTo "") then
-		{
-			[] call compile preprocessFileLineNumbers "\userconfig\VCOM_AI\AISettingsV3.hpp";
-			[Vcm_Settings] remoteExec ["VCM_PublicScript",0,false];
-		}
-		else
-		{
-			[] call compile preprocessFileLineNumbers "btc\framework\extScripts\Vcom\Functions\VCOMAI_DefaultSettings.sqf";
-			[Vcm_Settings] remoteExec ["VCM_PublicScript",0,false];
-		};
-	}
-	else
-	{
-			[] call compile preprocessFileLineNumbers "btc\framework\extScripts\Vcom\Functions\VCOMAI_DefaultSettings.sqf";
-			[Vcm_Settings] remoteExec ["VCM_PublicScript",0,false];
-	};
+	[] call compile preprocessFileLineNumbers "btc\framework\extScripts\Vcom\Functions\VCOMAI_DefaultSettings.sqf";
+	[Vcm_Settings] remoteExec ["VCM_PublicScript",0,false];
+	[] call Vcm_Settings;
 }
 else
 {
@@ -47,6 +30,9 @@ Vcm_SM = compileFinal "(_this select 0) switchMove (_this select 1);";
 Vcm_PAN = compileFinal "(_this select 0) playActionNow (_this select 1);";
 VCOM_MINEARRAY = [];
 
+if(hasInterface) then {
+	[] call VCM_fnc_VcomInitClient;
+};
 //OnEachFrame monitor for mines. Should make them more responsive, without a significant impact on FPS.
 ["VCMMINEMONITOR", "onEachFrame", {[] call VCM_fnc_MineMonitor}] call BIS_fnc_addStackedEventHandler;
 
@@ -61,14 +47,14 @@ VCOM_MINEARRAY = [];
 		if (Vcm_ActivateAI) then
 		{
 			{
-				if (local _x && {simulationEnabled (leader _x)} && {!(isplayer (leader _x))} && {(leader _x) isKindOf "Man"}) then 
+				if (local _x && {simulationEnabled (leader _x)} && {!(isplayer (leader _x))} && {(leader _x) isKindOf "CAManBase"}) then 
 				{
 					private _Grp = _x;
 						if !(_Grp in VcmAI_ActiveList) then //{!(VCM_SIDEENABLED findIf {_x isEqualTo (side _Grp)} isEqualTo -1)}
 						{
 							if !(((units _Grp) findIf {alive _x}) isEqualTo -1) then
 							{
-								_x call VCM_fnc_SquadExc;
+								_Grp call VCM_fnc_SquadExc;
 							};
 						};
 				};

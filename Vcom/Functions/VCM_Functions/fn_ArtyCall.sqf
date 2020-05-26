@@ -76,7 +76,7 @@ if (isNil "_clstGrp") exitWith {};
 
 private _EnemyGrpLeader = leader _enemyGrp;
 //Find any friendlies within 50 meters.
-private _AllEmyUnits = _EnemyGrpLeader nearEntities [["Man","LandVehicle"], 50];
+private _AllEmyUnits = _EnemyGrpLeader nearEntities [["CAManBase","LandVehicle"], 50];
 
 if (count _AllEmyUnits < 1) exitWith {};
 
